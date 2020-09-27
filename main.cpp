@@ -237,14 +237,28 @@ int main(int argc, const char * argv[]) {
         chaves = converteBinario(chaves);
 
         if(testeMonobit(chaves) == 1)
-            cout << "Essa chave passou no teste monobit" << endl;
+            cout << "A chave " << chave << " passou no teste monobit" << endl;
         else
-            cout << "Essa chave não passou no teste monobit" << endl;
+            cout << "A chave " << chave << " não passou no teste monobit, logo, não é aleatória" << endl;
+
+        if(pokerTest(chaves) == 1)
+            cout << "A chave " << chave << " passou no poker test" << endl;
+        else
+            cout << "A chave " << chave << " não passou no poker test" << endl;
+
+        if(runsTeste(chaves) == 1)
+            cout << "A chave " << chave << " passou no run teste" << endl;
+        else
+            cout << "A chave " << chave << " não passou no run teste" << endl;
 
         if(longRunTest(chaves) == 1)
-            cout << "Essa chave passou no teste long run" << endl;
+            cout << "A chave " << chave << " passou no long run teste e é aleatória" << endl;
+        else
+            cout << "A chave " << chave << " não passou no long run teste" << endl;
 
         chaves.clear();
+
+        chave++;
     }*/
 
     myfile.close();
